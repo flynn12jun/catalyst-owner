@@ -312,28 +312,28 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
-docker pull "decentraland/catalyst-content:${DOCKER_TAG:-latest}"
+docker pull "flynn12jun/catalyst-content:${DOCKER_TAG:-latest}"
 if [ $? -ne 0 ]; then
   echo -n "Failed to pull the content's docker image with tag ${DOCKER_TAG:-latest}"
   printMessage failed
   exit 1
 fi
 
-docker pull "decentraland/catalyst-lambdas:${DOCKER_TAG:-latest}"
+docker pull "flynn12jun/catalyst-lambdas:${DOCKER_TAG:-latest}"
 if [ $? -ne 0 ]; then
   echo -n "Failed to pull the lambda's docker image with tag ${DOCKER_TAG:-latest}"
   printMessage failed
   exit 1
 fi
 
-docker pull "decentraland/catalyst-lighthouse:${LIGHTHOUSE_DOCKER_TAG:-latest}"
+docker pull "flynn12jun/catalyst-lighthouse:${LIGHTHOUSE_DOCKER_TAG:-latest}"
 if [ $? -ne 0 ]; then
   echo -n "Failed to pull the lighthouse's docker image with tag ${LIGHTHOUSE_DOCKER_TAG:-latest}"
   printMessage failed
   exit 1
 fi
 
-docker pull "quay.io/decentraland/explorer-bff:${EXPLORER_BFF_DOCKER_TAG:-latest}"
+docker pull "flynn12jun/explorer-bff:${EXPLORER_BFF_DOCKER_TAG:-latest}"
 if [ $? -ne 0 ]; then
   echo -n "Failed to pull the explorer-bff's docker image with tag ${EXPLORER_BFF_DOCKER_TAG:-latest}"
   printMessage failed

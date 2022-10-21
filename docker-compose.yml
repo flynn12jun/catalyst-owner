@@ -77,6 +77,8 @@ services:
   postgres:
     image: postgres:12
     container_name: ${POSTGRES_HOST:-postgres}
+    ports:
+      - "5432:5432"
     env_file:
       - .env-database-admin
       - .env-database-content
